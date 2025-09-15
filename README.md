@@ -8,6 +8,9 @@
 [![NPM downloads](https://img.shields.io/npm/dm/uni-unocss?color=A12AEB&labelColor=18181B&label=downloads)](https://www.npmjs.com/package/uni-unocss)
 [![LICENSE](https://img.shields.io/github/license/skiyee/uni-unocss?style=flat&color=A12AEB&labelColor=18181B&label=license)](https://www.npmjs.com/package/uni-unocss)
 
+> [!Important]
+> 由于 UniApp 在Vite上的一些问题，目前均需要锁定UnoCss版本在 v66.0.0
+
 ### 📖 简介
 
 `uni-unocss` 是一个为 UniApp 平台量身定制的 UnoCSS 预设，它让你能够在 UniApp 项目中无缝使用 UnoCSS 的原子化 CSS 类。这个库支持 Web、App 以及 小程序 平台，并自动根据运行环境进行适配。
@@ -15,7 +18,7 @@
 ### ✨ 特性
 
 - 🚀 **零配置开箱即用** - 无需复杂配置即可在 UniApp 中使用 UnoCSS
-- 📱 **多平台支持** - 同时支持 Web 和小程序平台
+- 📱 **多平台支持** - 同时支持 Web、App和小程序平台
 - 🔧 **自动平台检测** - 根据运行环境自动适配不同的平台
 - 🎨 **丰富的原子类** - 基于 UnoCSS 和 Wind CSS 的完整原子类支持
 - 🛠️ **自定义配置** - 支持自定义 UnoCSS 配置
@@ -24,11 +27,11 @@
 ### 📦 安装
 
 ```bash
-npm install uni-unocss unocss@66.0.0
+npm install uni-unocss
 # 或
-pnpm add uni-unocss unocss@66.0.0
+pnpm add uni-unocss
 # 或
-yarn add uni-unocss unocss@66.0.0
+yarn add uni-unocss
 ```
 
 ### 🚀 使用

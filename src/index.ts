@@ -1,10 +1,11 @@
 import type { Preset } from '@unocss/core'
-import type { PresetWind3Options, Theme } from '@unocss/preset-wind3'
+import type { PresetWind3Options } from '@unocss/preset-wind3'
 
 import process from 'node:process'
 
 import { definePreset } from '@unocss/core'
 import { presetLegacyCompat } from '@unocss/preset-legacy-compat'
+import { presetWind3 } from '@unocss/preset-wind3'
 
 import { safeSelector } from './postprocessor-selector'
 import { preflightUni } from './preflight-uni'
@@ -46,7 +47,9 @@ export const presetUni = definePreset((opts: Options = {
     ],
   }
 
-  return opts.platform === 'miniapp' ? uniPreset : presetWind(opts.wind)
+  const unoPreset = presetWind3(opts.wind)
+
+  return opts.platform === 'miniapp' ? uniPreset : unoPreset
 })
 
 export default presetUni

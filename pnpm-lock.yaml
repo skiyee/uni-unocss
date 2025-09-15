@@ -93,6 +93,9 @@ importers:
       '@dcloudio/uni-quickapp-webview':
         specifier: 3.0.0-4070620250821001
         version: 3.0.0-4070620250821001(postcss@8.5.6)(rollup@4.50.2)(vue@3.4.21(typescript@5.9.2))
+      '@skiyee/uni-ui':
+        specifier: ^1.1.0
+        version: 1.1.0(vue@3.4.21(typescript@5.9.2))
       vue:
         specifier: 3.4.21
         version: 3.4.21(typescript@5.9.2)
@@ -118,6 +121,9 @@ importers:
       '@mini-types/alipay':
         specifier: ^3.0.14
         version: 3.0.14
+      '@skiyee/ui-preset':
+        specifier: ^0.0.8
+        version: 0.0.8(unocss@66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2)))
       '@types/node':
         specifier: ^24.3.1
         version: 24.4.0
@@ -1250,6 +1256,9 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@iconify-json/lucide@1.2.68':
+    resolution: {integrity: sha512-lR5xNJdn2CT0iR7lM25G4SewBO4G2hbr3fTWOc3AE9BspflEcneh02E3l9TBaCU/JOHozTJevWLrxBGypD7Tng==}
+
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
@@ -1774,6 +1783,37 @@ packages:
         optional: true
       eslint-plugin-no-only-tests:
         optional: true
+
+  '@skiyee/ucv@0.1.2':
+    resolution: {integrity: sha512-mAlBOTX+CwOAqdmtIxXRU+8pnW0IkisgDoNy6OFQnUxGy4rz3McC1uoDZ1XrbXiZhsDQeyJ5RzkShuxoJeexQQ==}
+
+  '@skiyee/ui-preset@0.0.8':
+    resolution: {integrity: sha512-B+Fw/ns6Le0+wD9Fn7cE8nscx/eAZpkO51yRWhAzYiE2dJ5kR53AgBKox36eOgCRGjg6bgCQC/SlM7Xju957Dw==}
+    peerDependencies:
+      unocss: '>=66.0.0'
+
+  '@skiyee/uni-ui@1.1.0':
+    resolution: {integrity: sha512-hyCnUyOaLD3pRqLiIQezUGf7upblpP6dSFljYo9+ka9ZWpRQI7pwYHy+fLb89f0nrEcsy8FgMmlpJmvdyWtWZw==}
+    peerDependencies:
+      arktype: '>=2.0.0'
+      valibot: '>=1.0.0'
+      vue: '>=3.4.21'
+      zod: '>=3.24.0'
+    peerDependenciesMeta:
+      arktype:
+        optional: true
+      valibot:
+        optional: true
+      zod:
+        optional: true
+
+  '@skiyee/unocss-preset-miniapp@0.0.4':
+    resolution: {integrity: sha512-abkiLI6UppJ4/WpWrtnj9EIVl2zqZcxGJwUK9ppff/VRFSAC12oaUG2QuipWdoPesbDCGIAnrMQ8TfVJxmyhOQ==}
+    peerDependencies:
+      unocss: '>=66.0.0'
+
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
 
   '@stylistic/eslint-plugin@3.1.0':
     resolution: {integrity: sha512-pA6VOrOqk0+S8toJYhQGv2MWpQQR0QpeUo9AhNkC49Y26nxBQ/nH1rta9bUU1rPw2fJ1zZEMV5oCX5AazT7J2g==}
@@ -6849,6 +6889,10 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@iconify-json/lucide@1.2.68':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify/types@2.0.0': {}
 
   '@iconify/utils@2.3.0':
@@ -7562,6 +7606,30 @@ snapshots:
       - eslint-import-resolver-node
       - supports-color
       - typescript
+
+  '@skiyee/ucv@0.1.2': {}
+
+  '@skiyee/ui-preset@0.0.8(unocss@66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2)))':
+    dependencies:
+      '@iconify-json/lucide': 1.2.68
+      '@skiyee/unocss-preset-miniapp': 0.0.4(unocss@66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2)))
+      '@unocss/core': 66.0.0
+      '@unocss/rule-utils': 66.0.0
+      unocss: 66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2))
+
+  '@skiyee/uni-ui@1.1.0(vue@3.4.21(typescript@5.9.2))':
+    dependencies:
+      '@iconify-json/lucide': 1.2.68
+      '@skiyee/ucv': 0.1.2
+      '@standard-schema/spec': 1.0.0
+      vue: 3.4.21(typescript@5.9.2)
+
+  '@skiyee/unocss-preset-miniapp@0.0.4(unocss@66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2)))':
+    dependencies:
+      '@unocss/core': 66.0.0
+      unocss: 66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2))
+
+  '@standard-schema/spec@1.0.0': {}
 
   '@stylistic/eslint-plugin@3.1.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)':
     dependencies:

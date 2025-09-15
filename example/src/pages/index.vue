@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SkButton from '@skiyee/uni-ui/components/sk-button.vue'
 import { ref } from 'vue'
 
 const name = ref('Uni UnoCSS')
@@ -16,7 +17,9 @@ const name = ref('Uni UnoCSS')
         采用更激进的语法在 UniApp 中使用 UnoCSS
       </div>
 
-      <div class="m2 flex justify-center text-2xl op30 translate-x-10 hover-op80">
+      <SkButton>Love from skiyee/ui</SkButton>
+
+      <div class="m2 flex justify-center text-2xl op30 translate-x-10 hover-op80 sk-unit:(py-6 my-8)">
         <a href="https://github.com/skiyee/unocss-preset-uni" target="_blank" class="i-carbon-logo-github text-inherit" />
       </div>
     </div>

@@ -1,3 +1,4 @@
+import presetSkiyeeUI from '@skiyee/ui-preset'
 import presetUni from 'uni-unocss'
 import {
   defineConfig,
@@ -8,6 +9,7 @@ import {
 export default defineConfig({
   presets: [
     presetUni(),
+    presetSkiyeeUI(),
   ],
   transformers: [
     transformerDirectives(),

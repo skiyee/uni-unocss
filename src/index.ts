@@ -42,9 +42,10 @@ export const presetUni = definePreset((opts: Options = {
     postprocess: [
       safeSelector(),
     ],
-    transformers: [
-      transformerClasses(),
-    ],
+    configResolved(config) {
+      config.transformers ??= []
+      config.transformers.push(transformerClasses())
+    },
   }
 
   const unoPreset = presetWind3(opts.wind)

@@ -5,7 +5,7 @@ import { entriesToCss, toArray } from '@unocss/core'
 
 export function preflightUni(): Preflight<Theme> {
   return {
-    layer: 'uni-unocss/preflight-uni',
+    layer: 'preflights',
     getCSS({ theme }) {
       if (theme.preflightBase) {
         const entries = Object.entries(theme.preflightBase)

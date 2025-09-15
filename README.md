@@ -6,7 +6,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/uni-unocss?color=A12AEB&labelColor=18181B&label=npm)](https://www.npmjs.com/package/uni-unocss)
 [![NPM downloads](https://img.shields.io/npm/dm/uni-unocss?color=A12AEB&labelColor=18181B&label=downloads)](https://www.npmjs.com/package/uni-unocss)
-[![LICENSE](https://img.shields.io/github/license/uni-unocss?style=flat&color=A12AEB&labelColor=18181B&label=license)](https://www.npmjs.com/package/uni-unocss)
+[![LICENSE](https://img.shields.io/github/license/skiyee/uni-unocss?style=flat&color=A12AEB&labelColor=18181B&label=license)](https://www.npmjs.com/package/uni-unocss)
 
 ### 📖 简介
 

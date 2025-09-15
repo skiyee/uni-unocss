@@ -8,11 +8,11 @@
 [![NPM downloads](https://img.shields.io/npm/dm/uni-unocss?color=A12AEB&labelColor=18181B&label=downloads)](https://www.npmjs.com/package/uni-unocss)
 [![LICENSE](https://img.shields.io/github/license/uni-unocss?style=flat&color=A12AEB&labelColor=18181B&label=license)](https://www.npmjs.com/package/uni-unocss)
 
-## 简介
+### 简介
 
 `uni-unocss` 是一个为 UniApp 平台量身定制的 UnoCSS 预设，它让你能够在 UniApp 项目中无缝使用 UnoCSS 的原子化 CSS 类。这个库支持 Web、App 以及 小程序 平台，并自动根据运行环境进行适配。
 
-## 特性
+### 特性
 
 - 🚀 **零配置开箱即用** - 无需复杂配置即可在 UniApp 中使用 UnoCSS
 - 📱 **多平台支持** - 同时支持 Web 和小程序平台
@@ -21,7 +21,7 @@
 - 🛠️ **自定义配置** - 支持自定义 UnoCSS 配置
 - 📦 **轻量级** - 只包含必要的功能，保持包体积最小化
 
-## 安装
+### 安装
 
 ```bash
 npm install uni-unocss unocss@66.0.0
@@ -31,9 +31,9 @@ pnpm add uni-unocss unocss@66.0.0
 yarn add uni-unocss unocss@66.0.0
 ```
 
-## 使用
+### 使用
 
-### 1. 配置 UnoCSS
+#### 1. 配置 UnoCSS
 
 在项目根目录创建 `uno.config.ts` 文件：
 
@@ -51,7 +51,7 @@ export default defineConfig({
 });
 ```
 
-### 2. 在 UniApp 中使用
+#### 2. 在 UniApp 中使用
 
 在 `main.ts` 中引入：
 
@@ -59,7 +59,7 @@ export default defineConfig({
 import "virtual:uno.css";
 ```
 
-### 3. 在组件中使用
+#### 3. 在组件中使用
 
 ```vue
 <template>
@@ -78,7 +78,7 @@ import "virtual:uno.css";
 </template>
 ```
 
-## 配置选项
+### 配置选项
 
 ```ts
 import { presetUni } from 'uni-unocss'
@@ -91,15 +91,15 @@ presetUni({
 })
 ```
 
-## 示例
+### 示例
 
 查看 `example` 目录中的完整示例项目。
 
-### 📣 社区
+### 社区
 
 - QQ 交流群 ([976866565](https://qm.qq.com/q/FyHN1X5qwK))
 
-### 💖 赞赏
+### 赞赏
 
 如果我的工作帮助到了您，可以请我吃辣条，使我能量满满 ⚡
 

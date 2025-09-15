@@ -12,7 +12,7 @@ export function transformerClasses(): SourceCodeTransformer {
     name: 'uni-unocss/transformer-uni',
     enforce: 'pre',
     async transform(code, id, ctx) {
-      const codeStr = code.toString()
+      let codeStr = code.toString()
 
       const { uno, tokens } = ctx
       const { matched } = await uno.generate(codeStr, { preflights: false })
@@ -35,7 +35,7 @@ export function transformerClasses(): SourceCodeTransformer {
         uno.config.shortcuts.push([noNegativeSafeToken, noNegativeToken, { layer }])
         tokens.add(noNegativeSafeToken)
 
-        code = code.replaceAll(noNegativeToken, noNegativeSafeToken)
+        codeStr = codeStr.replaceAll(noNegativeToken, noNegativeSafeToken)
       }
 
       code.overwrite(0, code.original.length, codeStr)

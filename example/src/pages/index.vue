@@ -1,10 +1,17 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const name = ref('Uni UnoCSS')
+</script>
+
 <template>
   <div class="h-screen text-center flex select-none transition-all">
     <div class="ma">
       <div class="text-3xl m-2.5 fw600 animate-bounce-alt animate-count-infinite animate-duration-1s">
-        @skiyee/unocss-preset-uni
+        {{ name }}
       </div>
 
+      <!-- 注释内容 -->
       <div class="op30 text-lg fw300 m1">
         采用更激进的语法在 UniApp 中使用 UnoCSS
       </div>

@@ -2,7 +2,6 @@
   "name": "uni-unocss",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
   "packageManager": "pnpm@10.7.1",
   "description": "采用更激进的语法在 UniApp 中使用 UnoCSS",
   "author": {

@@ -37,6 +37,12 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp"
+  },
   "peerDependencies": {
     "unocss": "66.0.0"
   },

@@ -1,0 +1,7 @@
+# Dependencies
+node_modules
+
+# Build Outputs
+build
+dist
+.idea

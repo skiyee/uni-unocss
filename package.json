@@ -1,0 +1,64 @@
+{
+  "name": "uni-unocss",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.7.1",
+  "description": "采用更激进的语法在 UniApp 中使用 UnoCSS",
+  "author": {
+    "name": "sKy",
+    "email": "319619193@qq.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/skiyee/uni-unocss#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skiyee/uni-unocss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skiyee/uni-unocss/issues"
+  },
+  "keywords": [
+    "uniapp",
+    "unocss",
+    "css"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "unocss": "66.0.0"
+  },
+  "dependencies": {
+    "@unocss/core": "66.0.0",
+    "@unocss/preset-legacy-compat": "66.0.0",
+    "@unocss/preset-wind3": "66.0.0"
+  },
+  "devDependencies": {
+    "@skiyee/eslint-config": "^0.1.0",
+    "@types/node": "^24.3.1",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.35.0",
+    "typescript": "^5.9.2",
+    "unbuild": "^3.6.1",
+    "vite": "^5.2.8"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "core-js",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  }
+}

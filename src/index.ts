@@ -1,5 +1,5 @@
 import type { Preset } from '@unocss/core'
-import type { PresetWind3Options } from '@unocss/preset-wind3'
+import type { PresetWind3Options, Theme } from '@unocss/preset-wind3'
 
 import process from 'node:process'
 
@@ -11,6 +11,7 @@ import { safeSelector } from './postprocessor-selector'
 import { preflightUni } from './preflight-uni'
 import { presetWind } from './preset-wind'
 import { transformerClasses } from './transformer-classes'
+import { variantMiddle, variantWildcard } from './variants'
 
 interface Options {
   /**
@@ -27,7 +28,7 @@ interface Options {
 export const presetUni = definePreset((opts: Options = {
   platform: (process.env.UNI_PLATFORM || '').startsWith('mp-') ? 'miniapp' : 'web',
 }) => {
-  const uniPreset: Preset = {
+  const uniPreset: Preset<Theme> = {
     name: 'uni-unocss',
     presets: [
       presetWind(opts.wind),
@@ -35,6 +36,10 @@ export const presetUni = definePreset((opts: Options = {
         commaStyleColorFunction: true,
         legacyColorSpace: true,
       }),
+    ],
+    variants: [
+      variantMiddle(),
+      variantWildcard(),
     ],
     preflights: [
       preflightUni(),

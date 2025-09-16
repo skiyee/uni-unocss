@@ -3,8 +3,8 @@ import type { Theme } from '@unocss/preset-wind3'
 
 import { SUPPORTED_ELEMENTS } from './constants'
 
-export function variantMiddle(): Variant<Theme>[] {
-  return [(matcher) => {
+export function variantMiddle(): Variant<Theme> {
+  return (matcher) => {
     if (matcher.startsWith('_')) {
       return
     }
@@ -17,13 +17,14 @@ export function variantMiddle(): Variant<Theme>[] {
           const selectors = SUPPORTED_ELEMENTS.map(el => `${input}>${el}:not(:first-child)`)
           return selectors.join(',')
         },
+
       }
     }
-  }]
+  }
 }
 
-export function variantWildcard(): Variant<Theme>[] {
-  return [(matcher) => {
+export function variantWildcard(): Variant<Theme> {
+  return (matcher) => {
     if (matcher.startsWith('_')) {
       return
     }
@@ -32,13 +33,21 @@ export function variantWildcard(): Variant<Theme>[] {
       return {
         name: 'uni-unocss/variant-wildcard',
         matcher,
-        selector: (input) => {
-          const newInput = input.replace(/\s?>\s?\*/g, '')
-          const selectors = SUPPORTED_ELEMENTS.map(el => `${newInput}>${el}`)
-          return selectors.join(',')
+        handle: (input, next) => {
+          const { selector, pseudo } = input
+          const rawSelector = selector.replace(/\s?>\s?\*/g, '')
+          let newSelectors = SUPPORTED_ELEMENTS.map(el => `${rawSelector}>${el}`)
+          if (pseudo) {
+            newSelectors = newSelectors.map(selector => `${selector}${pseudo}`)
+          }
+
+          return next({
+            ...input,
+            selector: newSelectors.join(','),
+            pseudo: '',
+          })
         },
       }
     }
-  },
-  ]
+  }
 }

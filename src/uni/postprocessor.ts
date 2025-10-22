@@ -1,6 +1,6 @@
 import type { Postprocessor } from '@unocss/core'
 
-import { UNSUPPORTED_SELECTOR_CHARS } from './constants'
+import { UNSUPPORTED_SELECTOR_CHARS } from './helper/constants'
 
 export function safeSelector(): Postprocessor {
   const unsupportedSelectorCharsPattern = UNSUPPORTED_SELECTOR_CHARS.map(char => `\\\\\\${char}`).join('|')

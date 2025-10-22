@@ -78,7 +78,6 @@
     "@vue/tsconfig": "^0.8.1",
     "miniprogram-api-typings": "^4.1.0",
     "uni-unocss": "workspace:*",
-    "unocss": "66.0.0",
     "vite": "5.2.8",
     "vue-tsc": "^3.0.6"
   }

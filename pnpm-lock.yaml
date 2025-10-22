@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@skiyee/ui-preset':
+        specifier: ^0.0.8
+        version: 0.0.8(unocss@66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2)))
       '@unocss/core':
         specifier: 66.0.0
         version: 66.0.0
@@ -38,7 +41,7 @@ importers:
         version: 5.9.2
       unbuild:
         specifier: ^3.6.1
-        version: 3.6.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))
+        version: 3.6.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))(vue@3.4.21(typescript@5.9.2))
       vite:
         specifier: ^5.2.8
         version: 5.2.8(@types/node@24.4.0)(terser@5.44.0)
@@ -145,9 +148,6 @@ importers:
       uni-unocss:
         specifier: workspace:*
         version: link:..
-      unocss:
-        specifier: 66.0.0
-        version: 66.0.0(postcss@8.5.6)(vite@5.2.8(@types/node@24.4.0)(terser@5.44.0))(vue@3.4.21(typescript@5.9.2))
       vite:
         specifier: 5.2.8
         version: 5.2.8(@types/node@24.4.0)(terser@5.44.0)
@@ -10211,7 +10211,7 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  mkdist@2.4.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2)):
+  mkdist@2.4.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))(vue@3.4.21(typescript@5.9.2)):
     dependencies:
       autoprefixer: 10.4.21(postcss@8.5.6)
       citty: 0.1.6
@@ -10228,6 +10228,7 @@ snapshots:
       tinyglobby: 0.2.15
     optionalDependencies:
       typescript: 5.9.2
+      vue: 3.4.21(typescript@5.9.2)
       vue-tsc: 3.0.7(typescript@5.9.2)
 
   mlly@1.8.0:
@@ -11162,7 +11163,7 @@ snapshots:
 
   ufo@1.6.1: {}
 
-  unbuild@3.6.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2)):
+  unbuild@3.6.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))(vue@3.4.21(typescript@5.9.2)):
     dependencies:
       '@rollup/plugin-alias': 5.1.1(rollup@4.50.2)
       '@rollup/plugin-commonjs': 28.0.6(rollup@4.50.2)
@@ -11178,7 +11179,7 @@ snapshots:
       hookable: 5.5.3
       jiti: 2.5.1
       magic-string: 0.30.19
-      mkdist: 2.4.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))
+      mkdist: 2.4.1(typescript@5.9.2)(vue-tsc@3.0.7(typescript@5.9.2))(vue@3.4.21(typescript@5.9.2))
       mlly: 1.8.0
       pathe: 2.0.3
       pkg-types: 2.3.0

@@ -13,11 +13,11 @@ const name = ref('Uni UnoCSS')
       </div>
 
       <!-- 注释内容 -->
-      <div class="op30 text-lg fw300 m1">
+      <div class="op30 text-lg fw300 m1 mb6">
         采用更激进的语法在 UniApp 中使用 UnoCSS
       </div>
 
-      <SkButton>Love from skiyee/ui</SkButton>
+      <SkButton label="Love from skiyee/ui" />
 
       <div class="m2 flex justify-center text-2xl op30 translate-x-10 hover-op80 sk-unit:(py-6 my-8)">
         <a href="https://github.com/skiyee/unocss-preset-uni" target="_blank" class="i-carbon-logo-github text-inherit" />

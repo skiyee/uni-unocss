@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import Uni from '@uni-helper/plugin-uni'
-import UnoCSS from 'unocss/vite'
+import UnoCSS from 'uni-unocss'
 import { defineConfig } from 'vite'
 
 export default defineConfig({

@@ -1,7 +1,7 @@
 import type { Variant } from '@unocss/core'
 import type { Theme } from '@unocss/preset-wind3'
 
-import { SUPPORTED_ELEMENTS } from './constants'
+import { SUPPORTED_ELEMENTS } from './helper/constants'
 
 export function variantMiddle(): Variant<Theme> {
   return (matcher) => {

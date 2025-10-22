@@ -1,6 +1,6 @@
 import type { SourceCodeTransformer } from '@unocss/core'
 
-import { UNSUPPORTED_SELECTOR_CHARS } from './constants'
+import { UNSUPPORTED_SELECTOR_CHARS } from './helper/constants'
 
 export function transformerClasses(): SourceCodeTransformer {
   const unsupportedSelectorCharsPattern = `[${UNSUPPORTED_SELECTOR_CHARS.map(char => `\\${char}`).join()}]`

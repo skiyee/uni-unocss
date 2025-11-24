@@ -30,15 +30,15 @@
       "require": "./dist/index.cjs"
     }
   },
-  "main": "dist/index.cjs",
+  "main": "dist/index.mjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "unbuild --stub",
-    "build": "unbuild",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
     "prepublishOnly": "pnpm build",
     "release": "bumpp"
   },
@@ -57,8 +57,8 @@
     "@types/node": "^24.3.1",
     "bumpp": "^10.2.3",
     "eslint": "^9.35.0",
+    "tsdown": "^0.16.6",
     "typescript": "^5.9.2",
-    "unbuild": "^3.6.1",
     "vite": "^5.2.8"
   },
   "pnpm": {

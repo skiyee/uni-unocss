@@ -1,0 +1,32 @@
+name: Publish Any Commit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '!**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - run: corepack enable
+      - uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+          package-manager-cache: false
+
+      - name: Install
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Release
+        run: pnpm dlx pkg-pr-new publish --compact --pnpm --only-templates

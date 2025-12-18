@@ -11,7 +11,7 @@
 
 ### 📖 文档
 
-点击前往 [uni-unocss 使用文档](https://skiyee.js.org/unocss) 了解更多的使用详情
+点击前往 [Uni UnoCSS 使用文档](https://skiyee.pages.dev/unocss) 了解更多的使用详情
 
 ### 👥 社区
 
@@ -60,5 +60,3 @@
 
 - [UnoCSS](https://github.com/unocss/unocss) - 提供了强大的原子化 CSS 引擎
 - [UnoCSS Applet](https://github.com/unocss-applet/unocss-applet) - 为小程序平台提供的 UnoCSS 支持
-
-没有这些优秀项目的基础，`uni-unocss` 将无法实现。

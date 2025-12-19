@@ -1,7 +1,8 @@
 name: Release
 
 permissions:
-  contents: write
+  contents: read
+  id-token: write
 
 on:
   push:
@@ -92,8 +93,8 @@ jobs:
     needs: release
     runs-on: ubuntu-latest
     permissions:
-      contents: read # 发布只需读权限
-      id-token: write # 用于 NPM Provenance
+      contents: read
+      id-token: write
     
     steps:
       - name: 检出代码
@@ -127,5 +128,4 @@ jobs:
       - name: 发布到 NPM
         run: pnpm publish --access public --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true

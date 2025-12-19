@@ -7,7 +7,7 @@ import { definePreset } from '@unocss/core'
 import { presetLegacyCompat } from '@unocss/preset-legacy-compat'
 import { presetWind3 } from '@unocss/preset-wind3'
 
-import { safeSelector } from './postprocessor'
+import { safeSelector, safeSize } from './postprocessor'
 import { preflightUni } from './preflights'
 import { presetWind } from './preset-wind'
 import { transformerClasses } from './transformers'
@@ -45,6 +45,7 @@ export const presetUni = definePreset((opts: Options = {
       preflightUni(),
     ],
     postprocess: [
+      safeSize(),
       safeSelector(),
     ],
     configResolved(config) {

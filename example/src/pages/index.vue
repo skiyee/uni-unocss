@@ -13,7 +13,7 @@ const name = ref('Uni UnoCSS')
       </div>
 
       <!-- 注释内容 -->
-      <div class="op30 text-lg fw300 m1 mb6">
+      <div class="op30 text-lg fw300 m1 mb6 mt-2rem">
         采用更激进的语法在 UniApp 中使用 UnoCSS
       </div>
 

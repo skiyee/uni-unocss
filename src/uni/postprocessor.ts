@@ -14,3 +14,18 @@ export function safeSelector(): Postprocessor {
     util.selector = util.selector.replaceAll(unsupportedSelectorCharsRegExp, '_a_')
   }
 }
+
+export function safeSize(): Postprocessor {
+  const remRE = /(-?[.\d]+)rem/g
+
+  return (util) => {
+    util.entries.forEach((i) => {
+      const value = i[1]
+      if (value && typeof value === 'string') {
+        if (remRE.test(value)) {
+          i[1] = value.replace(remRE, (_, p1) => `${p1 * 32}rpx`)
+        }
+      }
+    })
+  }
+}

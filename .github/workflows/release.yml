@@ -126,6 +126,6 @@ jobs:
           fi
 
       - name: 发布到 NPM
-        run: pnpm publish --access public --no-git-checks
+        run: pnpm publish --access public --no-git-checks --tag latest
         env:
           NPM_CONFIG_PROVENANCE: true

@@ -18,16 +18,19 @@ interface Options {
    * 运行平台
    * @default 自动检测环境
    */
-  platform: 'web' | 'miniapp';
+  platform?: 'web' | 'miniapp';
   /**
    * @unocss/preset-wind3 配置信息
    */
   wind?: PresetWind3Options;
 }
 
-export const presetUni = definePreset((opts: Options = {
-  platform: (process.env.UNI_PLATFORM || '').startsWith('mp-') ? 'miniapp' : 'web',
-}) => {
+export const presetUni = definePreset((options?: Options) => {
+  const opts = {
+    platform: (process.env.UNI_PLATFORM || '').startsWith('mp-') ? 'miniapp' : 'web',
+    ...options,
+  } satisfies Options
+
   const uniPreset: Preset<Theme> = {
     name: 'uni-unocss',
     presets: [

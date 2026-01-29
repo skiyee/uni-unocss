@@ -1,6 +1,6 @@
-import presetSkiyeeUI from '@skiyee/ui-preset'
 import {
   defineConfig,
+  presetIcons,
   presetUni,
   transformerDirectives,
   transformerVariantGroup,
@@ -9,7 +9,7 @@ import {
 export default defineConfig({
   presets: [
     presetUni(),
-    presetSkiyeeUI(),
+    presetIcons(),
   ],
   transformers: [
     transformerDirectives(),

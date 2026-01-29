@@ -1,5 +1,4 @@
 export { default as presetUni } from './uni/preset'
-export { default as presetSkiyeeUI } from '@skiyee/ui-preset'
 
 export {
   defineConfig,

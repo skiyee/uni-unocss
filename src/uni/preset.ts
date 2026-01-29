@@ -26,15 +26,18 @@ interface Options {
 }
 
 export const presetUni = definePreset((options?: Options) => {
-  const opts = {
-    platform: (process.env.UNI_PLATFORM || '').startsWith('mp-') ? 'miniapp' : 'web',
+  const platform = (process.env.UNI_PLATFORM || '').startsWith('mp-') ? 'miniapp' : 'web'
+
+  const resolvedOpts = {
+    platform,
     ...options,
   } satisfies Options
 
   const uniPreset: Preset<Theme> = {
     name: 'uni-unocss',
+    enforce: 'pre',
     presets: [
-      presetWind(opts.wind),
+      presetWind(resolvedOpts.wind),
       presetLegacyCompat({
         commaStyleColorFunction: true,
         legacyColorSpace: true,
@@ -51,15 +54,14 @@ export const presetUni = definePreset((options?: Options) => {
       safeSize(),
       safeSelector(),
     ],
-    configResolved(config) {
-      config.transformers ??= []
-      config.transformers.push(transformerClasses())
-    },
+    transformers: [
+      transformerClasses(),
+    ],
   }
 
-  const unoPreset = presetWind3(opts.wind)
+  const unoPreset = presetWind3(resolvedOpts.wind)
 
-  return opts.platform === 'miniapp' ? uniPreset : unoPreset
+  return resolvedOpts.platform === 'miniapp' ? uniPreset : unoPreset
 })
 
 export default presetUni

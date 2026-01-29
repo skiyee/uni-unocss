@@ -59,7 +59,6 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4070620250821001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4070620250821001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4070620250821001",
-    "@skiyee/uni-ui": "^1.1.0",
     "vue": "3.4.21",
     "vue-i18n": "9.6.2"
   },
@@ -70,7 +69,6 @@
     "@dcloudio/uni-stacktracey": "3.0.0-4070620250821001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4070620250821001",
     "@mini-types/alipay": "^3.0.14",
-    "@skiyee/ui-preset": "^0.0.8",
     "@types/node": "^24.3.1",
     "@uni-helper/plugin-uni": "0.1.0",
     "@uni-helper/uni-types": "^1.0.0-alpha.6",

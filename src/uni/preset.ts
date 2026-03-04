@@ -54,9 +54,10 @@ export const presetUni = definePreset((options?: Options) => {
       safeSize(),
       safeSelector(),
     ],
-    transformers: [
-      transformerClasses(),
-    ],
+    configResolved(config) {
+      config.transformers ??= []
+      config.transformers.push(transformerClasses())
+    },
   }
 
   const unoPreset = presetWind3(resolvedOpts.wind)

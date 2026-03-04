@@ -10,7 +10,7 @@ export function transformerClasses(): SourceCodeTransformer {
 
   return {
     name: 'uni-unocss/transformer-uni',
-    enforce: 'default',
+    enforce: 'pre',
     async transform(code, id, ctx) {
       let codeStr = code.toString()
 

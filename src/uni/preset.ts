@@ -35,7 +35,6 @@ export const presetUni = definePreset((options?: Options) => {
 
   const uniPreset: Preset<Theme> = {
     name: 'uni-unocss',
-    enforce: 'pre',
     presets: [
       presetWind(resolvedOpts.wind),
       presetLegacyCompat({
